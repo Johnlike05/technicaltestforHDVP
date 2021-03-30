@@ -6,12 +6,12 @@ import 'package:http/http.dart' as http;
 
 class UserProvider{
 
-final String _url = 'http://vast-shelf-26875.herokuapp.com/api';
+final String _url = 'https://vast-shelf-26875.herokuapp.com/api';
 
 //funcion para traer usarios de la BD
   Future<List<UserModel>> loadUsers() async{
     
-    final url = 'http://vast-shelf-26875.herokuapp.com/api/users';
+    final url = 'https://vast-shelf-26875.herokuapp.com/api/users';
     final resp = await http.get(url);
     
     final  decodedData = json.decode(resp.body);
